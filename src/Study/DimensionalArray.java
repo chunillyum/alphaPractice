@@ -13,6 +13,6 @@ public class DimensionalArray {//2차원 배열
 			//고로 i는 0번째와 1번째 행에만 접근하였고 2번만 실행 되었음. j는 i가 접근한 0번째 행의 10,20,30을 출력한 후
 			//i가 접근한 1번째 행의 40,50,60을 출력함....
 		}
-	}//dddxxddsddwd
+	}//dddxxddsddwdddd
 
 }
