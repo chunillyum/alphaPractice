@@ -5,22 +5,28 @@ import java.util.Scanner;
 
 public class JavaDiorLog {
 	static Scanner sc = new Scanner(System.in);
-	static class Scan {
-		static int num1 = sc.nextInt();
-		static String str = sc.nextLine().replaceAll("\\s+","");
-		static int num2 = sc.nextInt();
-	}
-		
-		public static void Add() {
-			if(Scan.str.equals("+")){
-				int result = Scan.num1+Scan.num2;
-				System.out.println(result);
-		}
-		}
-		
+	 static String input = sc.next();
+	    static String[] tokens = input.split("(?<=\\d)(?=\\D)|(?<=\\D)(?=\\d)");
 
-	public static void main(String[] args) {
-		Add();
-	}
-		
+	    public static void main(String[] args) {
+	        int num1 = Integer.parseInt(tokens[0]);
+	        String str = tokens[1];
+	        int num2 = Integer.parseInt(tokens[2]);
+	        int result = 0;
+	        switch(str) {
+	        case "+" :
+	        	result = num1 + num2;
+	        	break;
+	        case "-" :
+	        	result = num1 - num2;
+	        	break;
+	        case "*" :
+	        	result = num1 * num2;
+	        	break;
+	        case "/" :
+	        	result = num1 / num2;
+	        	break;
+	        }
+	        System.out.println(result);
+	        }
 }
