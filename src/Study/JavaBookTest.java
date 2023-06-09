@@ -9,7 +9,7 @@ public class JavaBookTest {
 		static int sidar = 1900;
 		static int fanta = 1800;
 		static int monster = 2300;
-	
+	}
 	//입력값 받아 음료수 가격을 리턴하는 메소드인데 아래 현금을 받고 가격이 맞는지 판별하는 메소드와 교류가 가능했으면 좋겠음.
 		//클래스로 바꿔야 할까? 클래스로 바꾸면 return이 안 될 텐데.
 		public static String drink() {
@@ -46,5 +46,5 @@ public class JavaBookTest {
 			System.out.println(drink());//이것도 drink를 클래스로 바꾸면 못 써먹잔슴
 		}
 
-	}
+	
 }
