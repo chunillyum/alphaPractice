@@ -44,7 +44,7 @@ public class ChatGptVersion {
         	System.out.println("금액이 부족합니다.");
         }
         else if(bills>DrinkPrice.monster) {
-        	System.out.println("잔돈 " + (bills - DrinkPrice.monster) + "원을 받으세요
+        	System.out.println("잔돈 " + (bills - DrinkPrice.monster) + "원을 받으세요");
         }
         sc.close();
     }

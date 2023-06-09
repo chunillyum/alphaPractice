@@ -37,7 +37,7 @@ public class ChoiceDrink {
         }
         System.out.println("현금을 투입구에 넣어주세요.");
         int bills = sc.nextInt();
-        if(bills==IntserParsent(getmenu)) {
+        if(bills==(getmenu)) {
         	System.out.println("맛있게 드세요");
         }
         else if(bills<DrinkPrice.monster) {
