@@ -37,6 +37,7 @@ public class OtherDrink {
 			}
 			continue;
 		}
+		//아래 코드들 메소드화 시켜서 분리하는 방법 괜찮은 것 같음.(while문 넣어서 잔액이 부족한 경우 다시 음료 선택 화면으로 돌아가도록.
 		System.out.println("주문하시겠습니까? 예/아니오");
 		String answer = sc.nextLine();
 		if (answer.equals("예")) {
