@@ -9,11 +9,13 @@ import doYouWantDrink2.DrinkInfo;
  * 저렇게 만들다 꼬이면 대참사다 아님?
  * 06.11 10:10am
  * 위 문제 고친 것 같은데 현재 현금을 입력하면 멈춤. 해결해야댐(이번 주까지)
+ * 현금 투입 후 입력한 음료의 값을 정하는 if문 break를 전부 뺐더니 해결됨
  */
 public class OtherDrink {
 	static Scanner sc = new Scanner(System.in);
 
 	public static String DrinkInfo() {
+		System.out.println("음료를 선택해주세요");
 		String wantDrink = "";
 		String userDrink = sc.nextLine();
 		wantDrink = userDrink;
@@ -32,7 +34,7 @@ public class OtherDrink {
 				break;
 			} else {
 				System.out.println("그건 없습니다.");
-				break;
+				return null;
 			}
 		}
 		return wantDrink;
@@ -50,7 +52,11 @@ public class OtherDrink {
 			public static String giveMeMoney() {
 				String userDrink = DrinkInfo();
 				String answer = userChoice();
-				
+				/*
+				 * userDrink를 판별해서 drinkPrice에 값을 대입하는 if문 부분.
+				 * break를 다 뺐더니 투입 금액에 따라 결과값이 잘 출력됨.
+				 * 지금 보니 break를 넣어버리니 바로 반복문을 빠져나와 종료가 됐던 것 같다
+				 */
 			while (true) {
 			if (answer.equals("예")) {
 			System.out.println("현금을 투입구에 넣어주세요");
@@ -59,16 +65,12 @@ public class OtherDrink {
 			int drinkPrice = 0;
 			if (userDrink.equals("콜라")) {
 				drinkPrice = DrinkInfo.coke;
-				break;
 			} else if (userDrink.equals("사이다")) {
 				drinkPrice = DrinkInfo.sidar;
-				break;
 			} else if (userDrink.equals("환타")) {
 				drinkPrice = DrinkInfo.fanta;
-				break;
 			} else if (userDrink.equals("몬스터")) {
 				drinkPrice = DrinkInfo.monster;
-				break;
 			}
 			if (amount == drinkPrice) {
 				System.out.println("맛있게 드세요");
@@ -87,7 +89,6 @@ public class OtherDrink {
 	}
 			}
 	public static void main(String[] args) {
-		System.out.println("음료를 선택해주세요");
 		getUser.giveMeMoney();
 		/*getUser.giveMeMoney();안에 DrinkInfo();랑 userChoice(); 로직이 다 들어있어서
 		 * main메소드 안에 

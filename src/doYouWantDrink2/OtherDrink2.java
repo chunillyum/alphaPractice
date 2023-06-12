@@ -9,6 +9,7 @@ import doYouWantDrink2.DrinkInfo;
  * 저렇게 만들다 꼬이면 대참사다 아님?
  * 06.11 10:10am
  * 위 문제 고친 것 같은데 현재 현금을 입력하면 멈춤. 해결해야댐(이번 주까지)
+ * 현금 투입 후 
  */
 public class OtherDrink2 {
 	static Scanner sc = new Scanner(System.in);
