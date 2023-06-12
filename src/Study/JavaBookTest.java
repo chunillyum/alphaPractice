@@ -34,14 +34,14 @@ public class JavaBookTest {
 				}
 			return getmenu;
 			}
-		public static int getMoney() {
-			drink.getmenu = new getMenu;//일단 객체생성 안 먹힘. drink가 메소드라 그런 듯
-			Scanner sc =  new Scanner(System.in);
-			System.out.println("현금을 투입구에 넣어주세요.");
-			int bills = sc.nextInt();
-			if(bills==)
-		}
-		
+//		public static int getMoney() {
+//			drink.getmenu = new getMenu;//일단 객체생성 안 먹힘. drink가 메소드라 그런 듯
+//			Scanner sc =  new Scanner(System.in);
+//			System.out.println("현금을 투입구에 넣어주세요.");
+//			int bills = sc.nextInt();
+//			if(bills==)
+//		}
+//		
 		public static void main(String[] args) {
 			System.out.println(drink());//이것도 drink를 클래스로 바꾸면 못 써먹잔슴
 		}

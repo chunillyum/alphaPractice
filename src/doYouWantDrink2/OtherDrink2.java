@@ -10,7 +10,7 @@ import doYouWantDrink2.DrinkInfo;
  * 06.11 10:10am
  * 위 문제 고친 것 같은데 현재 현금을 입력하면 멈춤. 해결해야댐(이번 주까지)
  */
-public class OtherDrink {
+public class OtherDrink2 {
 	static Scanner sc = new Scanner(System.in);
 
 	public static String DrinkInfo() {
@@ -47,7 +47,7 @@ public class OtherDrink {
 			
 			public static class getUser {
 			
-			public static String giveMeMoney() {
+			public static int giveMeMoney() {
 				String userDrink = DrinkInfo();
 				String answer = userChoice();
 				
@@ -56,39 +56,39 @@ public class OtherDrink {
 			System.out.println("현금을 투입구에 넣어주세요");
 			int amount = sc.nextInt();
 			sc.nextLine();
-			int drinkPrice = 0;
+			return amount;
+			}
+			}
+			}
+			}
+			//이렇게 분리할까?
+			public static void takeDrink() {
+				getUser money = new getUser();
+				String userDrink = DrinkInfo();
+				int drinkPrice = 0;
+				int amount = getUser.giveMeMoney();
+				
 			if (userDrink.equals("콜라")) {
 				drinkPrice = DrinkInfo.coke;
-				break;
 			} else if (userDrink.equals("사이다")) {
 				drinkPrice = DrinkInfo.sidar;
-				break;
 			} else if (userDrink.equals("환타")) {
 				drinkPrice = DrinkInfo.fanta;
-				break;
 			} else if (userDrink.equals("몬스터")) {
 				drinkPrice = DrinkInfo.monster;
-				break;
 			}
 			if (amount == drinkPrice) {
 				System.out.println("맛있게 드세요");
-				break;
 			} else if (amount < drinkPrice) {
 				System.out.println("잔액이 부족합니다.");
-				break;
 			} else if (amount > drinkPrice) {
 				System.out.println("잔돈은 " + (amount - drinkPrice) + "원 입니다.");
-				break;
 			}
 		}
-		return answer;
-	}
-			return userDrink;
-	}
-			}
 	public static void main(String[] args) {
 		System.out.println("음료를 선택해주세요");
 		getUser.giveMeMoney();
+		takeDrink();
 		/*getUser.giveMeMoney();안에 DrinkInfo();랑 userChoice(); 로직이 다 들어있어서
 		 * main메소드 안에 
 		 * getUser.giveMeMoney();
@@ -97,5 +97,4 @@ public class OtherDrink {
 		 * 이런 식으로 넣고 실행하면 각 메소드들의 입력값을 받는 행위가 여러번 반복됨. (이거 앞으로 코딩할 때도 주의할 것)
 		 */
 	}
-
-}
+	}

@@ -37,16 +37,16 @@ public class ChoiceDrink {
         }
         System.out.println("현금을 투입구에 넣어주세요.");
         int bills = sc.nextInt();
-        if(bills==(getmenu)) {
-        	System.out.println("맛있게 드세요");
-        }
-        else if(bills<DrinkPrice.monster) {
-        	System.out.println("금액이 부족합니다.");
-        }
-        else if(bills>DrinkPrice.monster) {
-        	System.out.println("잔돈 " + (bills - DrinkPrice.monster) + "원을 받으세요");
-        }
-        sc.close();
+//        if(bills==(getmenu)) {
+//        	System.out.println("맛있게 드세요");
+//        }
+//        else if(bills<DrinkPrice.monster) {
+//        	System.out.println("금액이 부족합니다.");
+//        }
+//        else if(bills>DrinkPrice.monster) {
+//        	System.out.println("잔돈 " + (bills - DrinkPrice.monster) + "원을 받으세요");
+//        }
+//        sc.close();
     }
 
 	public static void main(String[] args) {
