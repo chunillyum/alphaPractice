@@ -1,13 +1,17 @@
 package Study;
 
 import lombok.Data;
-
+import lombok.Getter;
 public class Annotation {
 
 	public static void main(String[] args) {
 
 	}
 
+}
+@Getter
+class SayHello{
+	String msg;
 }
 @Data
 	class Parent{
